@@ -2,9 +2,9 @@ import { AppBar, Toolbar, Button, Box } from '@mui/material'
 
 export default function NavBar() {
   
-  const navItems: Array<String> = ["Home", "About", "Contact"]
+  const navItems: Array<String> = ["Projects", "About", "Contact"]
 
-  const toolbarStyles: Object = {
+  const toolbarStyles = {
     display: "flex",
     justifyContent: "space-between"
   }
@@ -23,7 +23,9 @@ export default function NavBar() {
           { navItems.map((buttonName, idx) => {
             return(
               <Button
-                color="inherit">
+                color="inherit"
+                key={ idx }
+                >
                 { buttonName }
               </Button>
             )

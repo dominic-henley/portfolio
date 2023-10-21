@@ -1,0 +1,11 @@
+name: Main CI/CD
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions:/checkout@v2
+      - name: Build nextjs project
+        run: npm run build
+      - name: Deploy production code
+        run: npm start

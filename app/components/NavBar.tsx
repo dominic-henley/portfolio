@@ -1,37 +1,56 @@
-import { AppBar, Toolbar, Button, Box } from '@mui/material'
+import Image from "next/image";
+import logo from "../../public/logo.jpg";
+import { Navbar, NavbarBrand, NavbarToggle, NavbarCollapse, NavbarLink } from "flowbite-react";
 
 export default function NavBar() {
   
-  const navItems: Array<String> = ["Projects", "About", "Contact"]
-
-  const toolbarStyles = {
-    display: "flex",
-    justifyContent: "space-between"
+  interface Headers {
+    text: string,
+    url: string
   }
 
+  const navItems: Array<Headers> = [
+    {text: "Projects", url: "/projects"},
+    {text: "About", url: "/about"},
+    {text: "Contact", url: "/contact"}
+  ]
+
   return (
-    <AppBar
-      position="static"
+    <Navbar 
+      fluid 
+      rounded
+      className="bg-black"  
+    >
+      <NavbarBrand
+        href="/"
       >
-      <Toolbar
-        sx={toolbarStyles}
-      >
-        <Box>
-          Dominic Henley
-        </Box>
-        <Box>
-          { navItems.map((buttonName, idx) => {
-            return(
-              <Button
-                color="inherit"
-                key={ idx }
-                >
-                { buttonName }
-              </Button>
-            )
-          })}
-        </Box>
-      </Toolbar>
-    </AppBar>
+        <Image 
+          src={ logo }
+          alt="logo"
+          width={ 60 }
+          height={ 60 }
+          className="m-3 rounded-full overflow-hidden"
+        />
+        <span
+          className="self-center whitespace-nowrap text-xl font-semibold"
+        >
+          Dominic Henley | Developer
+        </span>
+      </NavbarBrand>
+      <NavbarToggle />
+      <NavbarCollapse>
+        {
+          navItems.map((header, idx) => (
+            <NavbarLink
+              className="text-white"
+              key={ idx }
+              href={ header.url }
+            >
+              { header.text }
+            </NavbarLink>
+          ))
+        }
+      </NavbarCollapse>
+    </Navbar>
   )
 }

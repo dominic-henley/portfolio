@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Ubuntu } from 'next/font/google'
 import NavBar from './components/NavBar'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Ubuntu({
+  weight: "300",
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: 'Dominic Henley',

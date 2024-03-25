@@ -12,7 +12,8 @@ export default function NavBar() {
   const navItems: Array<Headers> = [
     {text: "Projects", url: "/projects"},
     {text: "About", url: "/about"},
-    {text: "Contact", url: "/contact"}
+    {text: "Contact", url: "/contact"},
+    {text: "Blog", url: "/blog"},
   ]
 
   return (
@@ -29,7 +30,7 @@ export default function NavBar() {
           alt="logo"
           width={ 60 }
           height={ 60 }
-          className="m-3 rounded-full overflow-hidden"
+          className="m-3 rounded-full overflow-hidden h-auto w-auto"
         />
         <span
           className="self-center whitespace-nowrap text-xl font-semibold"

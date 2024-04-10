@@ -7,7 +7,6 @@ export const blogType = defineType({
   fields: [
     { name: 'Title', type: 'string' },
     { 
-      title: 'Body',
       name: 'body',
       type: 'array',
       of: [{ type: 'block' }]

@@ -10,17 +10,17 @@ export default function NavBar() {
   }
 
   const navItems: Array<Headers> = [
-    {text: "Projects", url: "/projects"},
     {text: "About", url: "/about"},
+    {text: "Projects", url: "/projects"},
     {text: "Contact", url: "/contact"},
-    {text: "Blog", url: "/blog"},
+    // {text: "Blog", url: "/blog"},
   ]
 
   return (
     <Navbar 
       fluid 
       rounded
-      className="bg-black"  
+      className="bg-black mx-3"  
     >
       <NavbarBrand
         href="/"
@@ -33,9 +33,9 @@ export default function NavBar() {
           className="m-3 rounded-full overflow-hidden h-auto w-auto"
         />
         <span
-          className="self-center whitespace-nowrap text-xl font-semibold"
+          className="self-center whitespace-nowrap font-semibold"
         >
-          Dominic Henley | Developer
+          Dominic Henley | Software Developer
         </span>
       </NavbarBrand>
       <NavbarToggle />

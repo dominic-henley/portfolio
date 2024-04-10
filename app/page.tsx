@@ -1,17 +1,17 @@
 "use client"
 
 import Typewriter from 'typewriter-effect'
+import SeeMore from './components/SeeMore'
+import MyTimeline from './components/MyTimeline'
 
 export default function Home() {
 
-  const softwareDev = "<span className='text-green-200'>Software Developer</span>"
-
-  const typewriterWords = [softwareDev, "Programmer"]
+  const typewriterWords = ["Software Developer", "Programmer"]
 
   return (
     <>
     <div
-      className="flex justify-center content-center"
+      className="flex justify-center content-center h-screen animate-fade"
     >
       <h3>
         Hi, my name is Dominic. I'm a 
@@ -20,11 +20,13 @@ export default function Home() {
             strings: typewriterWords,
             autoStart: true,
             loop: true,
-            skipAddStyles: true
+            wrapperClassName: "text-green"
           }}
         />
       </h3>
+      <SeeMore />
     </div>
+    <MyTimeline />
     </>
   )
 }

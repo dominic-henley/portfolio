@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Ubuntu } from 'next/font/google'
-import NavBar from './components/NavBar'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import './globals.css'
 
 const inter = Ubuntu({
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
   title: 'Dominic Henley',
 }
 
+// gsap configuration
+gsap.registerPlugin(useGSAP)
+
 export default function RootLayout({
   children,
 }: {
@@ -20,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
         <div>
           {children}
         </div>

@@ -5,12 +5,12 @@ import ChevronDoubleDown from "./icons/ChevronDoubleDown";
 
 export default function SeeMore() {
 
-  const TIMEOUT = 3000 // 3 seconds
+  const TIMEOUT = 5000 // 5 seconds
 
   const [screenIdle, setScreenIdle] = useState<boolean>(false);
   let timeoutId : ReturnType<typeof setTimeout>;
   useEffect(() => {
-     // Render See More component if screen doesn't move for more than 3 seconds
+     // Render See More component if screen doesn't move for more than TIMEOUT seconds
     timeoutId = setTimeout(() => {
       setScreenIdle(true);
     }, TIMEOUT)
@@ -30,11 +30,12 @@ export default function SeeMore() {
     }
   }
 
+  // TODO: add bounce animation to this later
   return (
     <>
        { ( screenIdle && (
             <div
-              className="flex absolute bottom-0 flex-col pb-5 animate-fade" // TODO: add bounce animation to this later
+              className="flex flex-col absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pb-4 animate-fade" 
             >
                 <div>
                   See More

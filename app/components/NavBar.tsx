@@ -20,38 +20,38 @@ export default function NavBar() {
     <Navbar 
       fluid 
       rounded
-      className="bg-black mx-3"  
+      className="bg-black sticky top-0 z-10"  
     >
-      <NavbarBrand
-        href="/"
-      >
-        <Image 
-          src={ logo }
-          alt="logo"
-          width={ 60 }
-          height={ 60 }
-          className="m-3 rounded-full overflow-hidden h-auto w-auto"
-        />
-        <span
-          className="self-center whitespace-nowrap font-semibold"
-        >
-          Dominic Henley | Software Developer
-        </span>
-      </NavbarBrand>
-      <NavbarToggle />
-      <NavbarCollapse>
-        {
-          navItems.map((header, idx) => (
-            <NavbarLink
+        <NavbarBrand
+          href="/"
+          >
+          <Image 
+            src={ logo }
+            alt="logo"
+            width={ 60 }
+            height={ 60 }
+            className="m-3 rounded-full overflow-hidden h-auto w-auto"
+            />
+          <span
+            className="self-center whitespace-nowrap font-semibold"
+            >
+            Dominic Henley
+          </span>
+        </NavbarBrand>
+        <NavbarToggle />
+        <NavbarCollapse>
+          {
+            navItems.map((header, idx) => (
+              <NavbarLink
               className="text-white"
               key={ idx }
               href={ header.url }
-            >
-              { header.text }
-            </NavbarLink>
-          ))
-        }
-      </NavbarCollapse>
+              >
+                { header.text }
+              </NavbarLink>
+            ))
+          }
+        </NavbarCollapse>
     </Navbar>
   )
 }

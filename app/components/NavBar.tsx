@@ -1,5 +1,4 @@
-import Image from "next/image";
-import logo from "../../public/logo.jpg";
+import Typewriter from 'typewriter-effect';
 import { Navbar, NavbarBrand, NavbarToggle, NavbarCollapse, NavbarLink } from "flowbite-react";
 
 export default function NavBar() {
@@ -8,6 +7,8 @@ export default function NavBar() {
     text: string,
     url: string
   }
+
+  const typewriterWords = ["Software Developer", "Programmer"]
 
   const navItems: Array<Headers> = [
     {text: "About", url: "/about"},
@@ -25,18 +26,15 @@ export default function NavBar() {
         <NavbarBrand
           href="/"
           >
-          <Image 
-            src={ logo }
-            alt="logo"
-            width={ 60 }
-            height={ 60 }
-            className="m-3 rounded-full overflow-hidden h-auto w-auto"
+          <span className="flex self-center whitespace-pre font-semibold">Dominic Henley | </span>
+          <Typewriter 
+            options={{
+              strings: typewriterWords,
+              autoStart: true,
+              loop: true,
+              wrapperClassName: "text-green font-semibold"
+            }}
             />
-          <span
-            className="self-center whitespace-nowrap font-semibold"
-            >
-            Dominic Henley
-          </span>
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>

@@ -19,7 +19,6 @@ export default function LandingPage() {
   const typewriterContainer = useRef(null);
   const imageRef = useRef(null);
   const skillsListContainer = useRef(null);
-  const skillsRef = useRef(null);
 
   const skills = [
     {name: "NextJS", icon: <TbBrandNextjs /> },
@@ -72,6 +71,7 @@ export default function LandingPage() {
           >
             { skills.map((skill) => (
               <Skill
+                key={ skill.name }
                 name={ skill.name }
                 icon={ skill.icon }
                 />

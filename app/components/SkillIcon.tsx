@@ -1,13 +1,9 @@
-import { useGSAP } from "@gsap/react";
-import { MutableRefObject, RefObject, useRef } from "react";
 import { IconContext } from "react-icons";
-import gsap from "gsap";
 
 interface skillType {
   name: string,
   icon: JSX.Element // This should be a React icon
 }
-
 
 export default function Skill({ name, icon } : skillType) {
   
@@ -24,7 +20,11 @@ export default function Skill({ name, icon } : skillType) {
               >
               { icon }
             </div>
-          { name }
+            <div
+              className="flex justify-center"
+              >
+              { name }
+            </div>
         </div>
       </IconContext.Provider>
     </>

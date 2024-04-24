@@ -41,10 +41,10 @@ export default function Bio() {
               <div
                 className="flex justify-center my-10 gap-10"
                 >
-                { socials.map((social) => (
+                { socials.map((social, idx) => (
                   <>
                     <Icon
-                      key={ social.name }
+                      key={ idx }
                       name={ social.name }
                       icon={ social.icon }
                       url={ social.url }

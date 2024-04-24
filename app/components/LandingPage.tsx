@@ -82,10 +82,10 @@ export default function LandingPage() {
             ref={ skillsListContainer }
             className="w-full flex flex-row justify-center flex-wrap content-center gap-x-6 gap-y-4"
             >
-              { skills.map((skill) => (
+              { skills.map((skill, idx) => (
                 <Icon
                   className="skill opacity-0 border-x-2 rounded-lg p-4"
-                  key={ skill.name }
+                  key={ idx }
                   name={ skill.name }
                   icon={ skill.icon }
                   />

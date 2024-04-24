@@ -4,7 +4,7 @@ import { Card } from "flowbite-react";
 import { FaGithub, FaLinkedin  } from "react-icons/fa";
 import Icon from "./Icon"
 
-export default function() {
+export default function Bio() {
   // Social Media
   const socials = [
     { name: 'GitHub', icon: <FaGithub />, url: "https://github.com/dominic-henley"},
@@ -29,11 +29,11 @@ export default function() {
                 </h5>
                 <p>
                   A recent graduate from The University of Melbourne,
-                  I'm passionate about Software Engineering and Cybersecurity.
-                  In the past, I've worked as a Software Developer where I built
+                  I&apos;m passionate about Software Engineering and Cybersecurity.
+                  In the past, I&apos;ve worked as a Software Developer where I built
                   tools to aid a company in their operations. My main skills are in
                   Web Development, but I spend my free time working on 
-                  learning new skills. The most recent skill I've been working on is
+                  learning new skills. The most recent skill I&apos;ve been working on is
                   Cybersecurity. I often participate in CTFs where I can practice
                   hacking skills.
                 </p>
@@ -44,6 +44,7 @@ export default function() {
                 { socials.map((social) => (
                   <>
                     <Icon
+                      key={ social.name }
                       name={ social.name }
                       icon={ social.icon }
                       url={ social.url }

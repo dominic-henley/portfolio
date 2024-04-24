@@ -8,7 +8,7 @@ export default function NavBar() {
     url: string
   }
 
-  const typewriterWords = ["Software Developer", "Programmer"]
+  const typewriterWords = ["Software Developer", "Programmer", "Web Developer"]
 
   const navItems: Array<Headers> = [
     {text: "About", url: "/about"},
@@ -21,7 +21,7 @@ export default function NavBar() {
     <Navbar 
       fluid 
       rounded
-      className="bg-black sticky top-0 z-10"  
+      className="bg-black-light sticky top-0 z-10 mx-10 pt-6"  
     >
         <NavbarBrand
           href="/"

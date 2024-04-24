@@ -24,19 +24,20 @@ const config: Config = {
 					to: { opacity: '1' },
 				},
 			},
-    },
-    colors: {
-      black: {
-        DEFAULT: '#1E1E1E'
-      },
-      green: {
-        DEFAULT: '#00F100'
-      },
-      white: {
-        DEFAULT: '#FDFDFD',
-        dark: '#D4D4D4'
+      colors: {
+        'black': {
+          light: '#1E1E1E',
+          DEFAULT: '#0a0a0a'
+        },
+        'green': {
+          DEFAULT: '#00F100'
+        },
+        'white': {
+          DEFAULT: '#FDFDFD',
+          dark: '#D4D4D4'
+        }
       }
-    }
+    },
   },
   plugins: [
     require('flowbite/plugin'),

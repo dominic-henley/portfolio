@@ -1,12 +1,14 @@
-import LandingPage from './components/LandingPage'
-import MyTimeline from './components/MyTimeline'
+import LandingPage from './components/LandingPage';
+import TimelineBio from './components/TimelineBio';
+import ProjectCarousel from './components/ProjectCarousel';
 
 export default function Home() {
 
   return (
     <>
       <LandingPage />
-      <MyTimeline />
+      <TimelineBio />
+      <ProjectCarousel />
     </>
   )
 }

@@ -3,6 +3,7 @@ import { Ubuntu } from 'next/font/google'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import './globals.css'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const inter = Ubuntu({
   weight: "300",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 }
 
 // gsap configuration
-gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 export default function RootLayout({
   children,
@@ -24,7 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>
+        <div
+          className='bg-black-light'
+          >
           {children}
         </div>
       </body>

@@ -5,10 +5,18 @@ export const timelinePointType = defineType({
   name: 'timelinePoint',
   type: 'document',
   fields: [
-    { name: 'Date', type: 'string'}, // normally this would be datetime but flowbite-react timelines accept strings
-    { name: 'Title', type: 'string'},
-    { name: 'Body',
+    { 
+      name: 'date', 
+      type: 'date',
+      options: {
+        dateFormat: 'MMM-YYYY'
+      }
+    },
+    { name: 'title', type: 'string'},
+    { 
+      name: 'body',
       type: 'array',
-      of: [{ type: 'block' }]}
+      of: [{ type: 'block' }]
+    }
   ]
 })

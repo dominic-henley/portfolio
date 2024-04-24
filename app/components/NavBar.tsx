@@ -11,9 +11,9 @@ export default function NavBar() {
   const typewriterWords = ["Software Developer", "Programmer", "Web Developer"]
 
   const navItems: Array<Headers> = [
-    {text: "About", url: "/about"},
-    {text: "Projects", url: "/projects"},
-    {text: "Contact", url: "/contact"},
+    // {text: "About", url: "/about"},
+    // {text: "Projects", url: "/projects"},
+    // {text: "Contact", url: "/contact"},
     // {text: "Blog", url: "/blog"},
   ]
 

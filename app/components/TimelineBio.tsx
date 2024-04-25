@@ -16,8 +16,6 @@ export default async function TimelineBio() {
   // Sort fetched data based on date
   timelinePoints.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
 
-
-
   // TODO: add mobile support
   return (
     <>

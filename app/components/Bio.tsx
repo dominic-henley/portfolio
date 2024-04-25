@@ -27,6 +27,8 @@ export default function Bio() {
                   >
                     A little about me
                 </h5>
+
+                { /* Might move this <p> tag to CMS because of potential apos escaping */ }
                 <p>
                   A recent graduate from The University of Melbourne,
                   I&apos;m passionate about Software Engineering and Cybersecurity.

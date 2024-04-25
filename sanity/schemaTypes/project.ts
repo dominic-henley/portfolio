@@ -14,9 +14,28 @@ export const projectType = defineType({
       }
     },
     {
+      name: 'status',
+      type: 'string',
+      options: {
+        list: ['Done', 'Work In Progress'],
+      }
+    },
+    {
+      name: 'thumbnail',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'skills',
+      type: 'array',
+      of: [ {type: 'string'} ]
+    },
+    {
       name: 'body',
       type: 'array',
-      of: [{ type: 'block' }, { type: 'image' }]
-    }
+      of: [ {type: 'block'} ]
+    },
   ]
 })

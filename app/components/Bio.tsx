@@ -16,7 +16,7 @@ export default function Bio() {
       className="w-1/2 flex justify-center"
       >
         <Card
-          className="w-2/3 h-full py-10 bg-black"
+          className="w-2/3 h-full py-10 bg-black border-grey-light"
           >
             <div
               className="flex flex-col"
@@ -44,14 +44,13 @@ export default function Bio() {
                 className="flex justify-center my-10 gap-10"
                 >
                 { socials.map((social, idx) => (
-                  <>
                     <Icon
                       key={ idx }
                       name={ social.name }
                       icon={ social.icon }
                       url={ social.url }
                     />
-                  </> ))}
+                  ))}
               </div>
             </div>
         </Card>

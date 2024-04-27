@@ -26,8 +26,7 @@ const config: Config = {
 			},
       colors: {
         'black': {
-          light: '#1E1E1E',
-          DEFAULT: '#0a0a0a'
+          DEFAULT: '#0A0A0A'
         },
         'green': {
           DEFAULT: '#00F100'
@@ -35,6 +34,11 @@ const config: Config = {
         'white': {
           DEFAULT: '#FDFDFD',
           dark: '#D4D4D4'
+        },
+        'grey': {
+          light: '#4A4A4A',
+          DEFAULT: '#1E1E1E',
+          dark: '#1A1A1A'
         }
       }
     },

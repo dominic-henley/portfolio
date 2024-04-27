@@ -1,6 +1,6 @@
 import LandingPage from './components/LandingPage';
+import ProjectContextWrapper from './components/ProjectContextWrapper';
 import TimelineBio from './components/TimelineBio';
-import ProjectCarousel from './components/ProjectCarousel';
 
 export default function Home() {
 
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <LandingPage />
       <TimelineBio />
-      <ProjectCarousel />
+      <ProjectContextWrapper />
     </>
   )
 }

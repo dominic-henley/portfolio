@@ -28,6 +28,10 @@ export const projectType = defineType({
       }
     },
     {
+      name: 'altText',
+      type: 'string',
+    },
+    {
       name: 'skills',
       type: 'array',
       of: [ {type: 'string'} ]
@@ -37,5 +41,10 @@ export const projectType = defineType({
       type: 'array',
       of: [ {type: 'block'} ]
     },
+    {
+      name: 'post',
+      type: 'reference',
+      to: [{ type: 'blog' }]
+    }
   ]
 })

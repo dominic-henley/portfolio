@@ -20,11 +20,12 @@ export default async function TimelineBio() {
   return (
     <>
     <div
-      className="flex flex-col"
+      className="flex flex-col my-10"
       >
       <div
         className="flex flex-row"
         >
+        <Bio />
         <div
           className="w-2/3 flex justify-center"
         >
@@ -46,7 +47,6 @@ export default async function TimelineBio() {
             )}
           </Timeline>
         </div>
-        <Bio />
       </div>
       <Divider text="-" />
     </div>

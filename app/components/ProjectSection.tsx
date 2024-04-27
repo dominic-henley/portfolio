@@ -38,6 +38,7 @@ export default function ProjectSection() {
             >
               { projects.map((project, idx) => (
                   <div
+                    key={ idx }
                     className={`w-full flex ${idx % 2 == 0 ? 'flex-row' : 'flex-row-reverse'} gap-4`}
                     >
                       <div
@@ -92,11 +93,11 @@ export default function ProjectSection() {
                                   </Badge>
                                 ))}
                               </div>
-                            <Button
-                              className="bg-grey-dark"
-                              >
-                              Read More
-                            </Button>
+                              <Button
+                                className="bg-grey-dark"
+                                >
+                                Read More
+                              </Button>
                           </div>
                         </Card>
                       </div>

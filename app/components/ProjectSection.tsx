@@ -84,7 +84,7 @@ export default function ProjectSection() {
                               <div
                                 className="flex gap-2"
                                 >
-                                { project.skills.map((skill, idx) => (
+                                { project.skills.map((skill : string, idx : number) => (
                                   <Badge
                                     className="bg-grey-dark text-white"
                                     key={ idx }

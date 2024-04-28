@@ -10,24 +10,18 @@ import ProjectSection from "./ProjectSection";
 */ 
 export default async function ProjectContextWrapper() {
   
-  const PROJECT_QUERY = `*[_type == 'project']`
+  // See GROQ joins for reference: https://www.sanity.io/docs/groq-joins
+  // Fetches all projects and joins them with the referenced post
+  const PROJECT_QUERY = `*[_type == 'project']{
+    ...,
+    post->
+  }`
   
   const projects : SanityDocument[] = await client.fetch(PROJECT_QUERY);
 
   // Sanity does not include imageUrl by default, so we need to add it to the project
   for(let project of projects) {
     project.imageUrl = urlForImage(project.thumbnail)
-  }
-
-  /* 
-    the project type contains a Reference _ref to a blog post which returns the _id of the post
-  */
-  // For each project, get the associated blog post if it exists
-  for(let project of projects) {
-    const BLOG_QUERY = `*[_type == 'blog' && _id == '${ project.post._ref }']`
-    const blogPost : SanityDocument = await client.fetch(BLOG_QUERY);
-    project.blogPost = blogPost;
-    // Honestly not sure if this is the intended way of doing it, TODO: consult sanity docs  
   }
 
   return (

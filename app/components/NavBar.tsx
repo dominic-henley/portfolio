@@ -1,3 +1,5 @@
+"use client"
+
 import Typewriter from 'typewriter-effect';
 import { Navbar, NavbarBrand, NavbarToggle, NavbarCollapse, NavbarLink } from "flowbite-react";
 
@@ -21,7 +23,7 @@ export default function NavBar() {
     <Navbar 
       fluid 
       rounded
-      className="bg-black-light sticky top-0 z-10 mx-10 pt-6"  
+      className="bg-black-light top-0 z-10 mx-10 pt-6"  
     >
         <NavbarBrand
           href="/"

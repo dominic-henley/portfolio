@@ -9,6 +9,7 @@ import Divider from "./Divider"
 import { Badge, Button, Card } from "flowbite-react"
 import { portableToPlainText } from "../utils/text"
 import Chip from "./Chip"
+import Link from "next/link"
 
 export default function ProjectSection() {
   
@@ -93,11 +94,15 @@ export default function ProjectSection() {
                                   </Badge>
                                 ))}
                               </div>
-                              <Button
-                                className="bg-grey-dark"
+                              <Link
+                                href={`/blog/${project.post?.slug.current}`}
                                 >
-                                Read More
-                              </Button>
+                                <Button
+                                  className="bg-grey-dark"
+                                  >
+                                  Read More
+                                </Button>
+                              </Link>
                           </div>
                         </Card>
                       </div>

@@ -44,7 +44,7 @@ export const projectType = defineType({
     {
       name: 'post',
       type: 'reference',
-      to: [{ type: 'blog' }]
+      to: [ { type: 'blog' } ]
     }
   ]
 })

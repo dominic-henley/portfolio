@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import './globals.css'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import NavBar from './components/NavBar';
 
 const inter = Ubuntu({
   weight: "300",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <div
           className='bg-grey'
           >
+          <NavBar />
           {children}
         </div>
       </body>

@@ -4,7 +4,6 @@ import Image from "next/image";
 import logo from "../../public/logo.jpg";
 import SeeMore from './SeeMore';
 import Divider from './Divider';
-import NavBar from './NavBar';
 import Icon from "./Icon";
 
 import { useRef } from 'react';
@@ -43,7 +42,6 @@ export default function LandingPage() {
   // TODO: Maybe use gsap here for a more attractive landing page
   return (
     <div className="flex flex-col h-screen">
-      <NavBar />
       <div
         className="mx-16 h-full flex"
         >

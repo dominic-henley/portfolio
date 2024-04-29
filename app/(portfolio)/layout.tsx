@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from 'next'
 import { Ubuntu } from 'next/font/google'
 import gsap from "gsap";
@@ -31,6 +32,7 @@ export default function RootLayout({
           >
           <NavBar />
           {children}
+          <Analytics />
         </div>
       </body>
     </html>

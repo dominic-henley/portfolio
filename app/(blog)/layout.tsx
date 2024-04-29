@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from 'next'
 import { Ubuntu } from 'next/font/google'
 import gsap from "gsap";
@@ -34,6 +35,7 @@ export default function RootLayout({
             className='flex-grow'
             >
             {children}
+            <Analytics />
           </div>
         </div>
       </body>

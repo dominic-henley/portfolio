@@ -15,6 +15,7 @@
     "@sanity/client": "^6.15.5",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.34.0",
+    "@vercel/analytics": "^1.2.2",
     "flowbite-react": "^0.7.2",
     "gsap": "^3.12.5",
     "moment": "^2.30.1",

@@ -18,6 +18,7 @@ export const blogType = defineType({
       }
     },
     { name: 'thumbnail', type: 'image' },
+    { name: 'thumbnailAlt', type: 'string'},
     { name: 'publishDate', type: 'datetime' },
     { 
       name: 'body',

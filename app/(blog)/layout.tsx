@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { Ubuntu } from 'next/font/google'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import './globals.css'
+import '../globals.css'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import NavBar from './components/NavBar';
+import NavBar from '../components/NavBar';
 
 const inter = Ubuntu({
   weight: "300",
@@ -27,10 +27,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div
-          className='bg-grey'
+          className='bg-grey h-screen flex flex-col'
           >
           <NavBar />
-          {children}
+          <div
+            className='flex-grow'
+            >
+            {children}
+          </div>
         </div>
       </body>
     </html>

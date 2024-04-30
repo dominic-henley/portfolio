@@ -99,7 +99,7 @@ export default function ProjectSection() {
                                 href={`/blog/${project.post?.slug.current}`}
                                 >
                                 <Button
-                                  className="bg-grey-dark"
+                                  className={`bg-grey-dark ${ project.post ? 'block' : 'hidden'}`} 
                                   >
                                   Read More
                                 </Button>

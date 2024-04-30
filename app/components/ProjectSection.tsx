@@ -35,6 +35,7 @@ export default function ProjectSection() {
             Projects
           </h1>
           <div
+            className="flex flex-col gap-y-16"
             ref={ projectContainer }
             >
               { projects.map((project, idx) => (

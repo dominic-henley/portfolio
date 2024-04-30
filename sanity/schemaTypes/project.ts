@@ -45,6 +45,10 @@ export const projectType = defineType({
       name: 'post',
       type: 'reference',
       to: [ { type: 'blog' } ]
+    },
+    {
+      name: 'liveLink',
+      type: 'string',
     }
   ]
 })

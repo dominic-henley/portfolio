@@ -95,15 +95,30 @@ export default function ProjectSection() {
                                   </Badge>
                                 ))}
                               </div>
-                              <Link
-                                href={`/blog/${project.post?.slug.current}`}
+                              <div
+                                className="flex gap-2"
                                 >
-                                <Button
-                                  className={`bg-grey-dark ${ project.post ? 'block' : 'hidden'}`} 
+                                <Link
+                                  href={`/blog/${project.post?.slug.current}`}
+                                  target="_blank"
                                   >
-                                  Read More
-                                </Button>
-                              </Link>
+                                  <Button
+                                    className={`bg-grey-dark ${ project.post ? 'block' : 'hidden'}`} 
+                                    >
+                                    Read More
+                                  </Button>
+                                </Link>
+                                <Link
+                                  href={ project.liveLink ?? ''}
+                                  target="_blank"
+                                  >
+                                  <Button
+                                    className={`bg-grey-dark ${ project.liveLink ? 'block' : 'hidden'}`} 
+                                    >
+                                    Visit Site
+                                  </Button>
+                                </Link>
+                              </div>
                           </div>
                         </Card>
                       </div>

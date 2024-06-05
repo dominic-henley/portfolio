@@ -52,6 +52,11 @@ export default function Bio() {
                     />
                   ))}
               </div>
+              <div
+                className="flex justify-center"
+              >
+                dominicshenley@gmail.com
+              </div>
             </div>
         </Card>
       </div>

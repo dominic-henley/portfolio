@@ -47,7 +47,7 @@ export default function LandingPage() {
         >
         <div 
           ref={ typewriterContainer }
-          className="w-1/2 flex flex-col justify-center"  
+          className="w-1/2 flex flex-col justify-center gap-y-4"  
           >
           <div
             className="flex justify-center"

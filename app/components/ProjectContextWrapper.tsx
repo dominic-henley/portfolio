@@ -17,7 +17,7 @@ export default async function ProjectContextWrapper() {
     post->
   }`
   
-  const projects : SanityDocument[] = await client.fetch(PROJECT_QUERY);
+  const projects : SanityDocument[] = await client.fetch(PROJECT_QUERY, {}, { cache: 'no-store' });
 
   // Sanity does not include imageUrl by default, so we need to add it to the project
   for(let project of projects) {

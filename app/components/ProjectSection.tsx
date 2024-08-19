@@ -17,9 +17,6 @@ export default function ProjectSection() {
 
   const projectContainer = useRef(null);
 
-  console.log("test")
-  console.log(projects);
-
   useGSAP(() => {
     // TODO: animate with scrolltrigger
   }) // { scope: }

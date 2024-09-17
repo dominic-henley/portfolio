@@ -16,7 +16,6 @@ import { SiSanity, SiPostgresql, SiGreensock, SiTailwindcss } from "react-icons/
 
 export default function LandingPage() {
   
-  const typewriterContainer = useRef(null);
   const imageRef = useRef(null);
   const skillsListContainer = useRef(null);
 
@@ -41,13 +40,12 @@ export default function LandingPage() {
 
   // TODO: Maybe use gsap here for a more attractive landing page
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col md:h-screen">
       <div
-        className="mx-16 h-full flex"
+        className="mx-16 h-full flex flex-col md:flex-row"
         >
         <div 
-          ref={ typewriterContainer }
-          className="w-1/2 flex flex-col justify-center gap-y-4"  
+          className="h-screen md:w-1/2 flex flex-col justify-center gap-y-4"  
           >
           <div
             className="flex justify-center"
@@ -70,7 +68,7 @@ export default function LandingPage() {
           </div>
         </div>
         <div
-          className="w-1/2 flex flex-col justify-center content-center gap-y-6"
+          className="md:w-1/2 flex flex-col justify-center content-center gap-y-6"
           >
           <div
             className="w-full flex justify-center"

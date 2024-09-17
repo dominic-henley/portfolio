@@ -13,10 +13,10 @@ export default function Bio() {
   
   return (
     <div
-      className="w-1/2 flex justify-center"
+      className="w-full md:w-1/2 flex justify-center"
       >
         <Card
-          className="w-2/3 h-full py-10 bg-black border-grey-light"
+          className="w-5/6 md:w-2/3 h-full py-10 bg-black border-grey-light"
           >
             <div
               className="flex flex-col"

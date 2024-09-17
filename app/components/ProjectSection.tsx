@@ -27,10 +27,10 @@ export default function ProjectSection() {
   return (
     <>
       <div
-        className="mx-24 my-10 flex flex-col gap-10"
+        className="md:mx-24 my-10 flex flex-col gap-10"
         >
           <h1
-            className="text-3xl"
+            className="mx-16 md:mx-0 text-3xl"
             >
             Projects
           </h1>
@@ -39,89 +39,118 @@ export default function ProjectSection() {
             ref={ projectContainer }
             >
               { projects.map((project, idx) => (
-                  <div
-                    key={ idx }
-                    className={`w-full flex ${idx % 2 == 0 ? 'flex-row' : 'flex-row-reverse'} gap-4`}
-                    >
-                      <div
-                        className="w-1/2 flex justify-center border-4 border-grey-light shadow-grey-dark rounded-md"
-                        >
-                        <Image 
-                          src={ project.imageUrl }
-                          alt={ project.altText }
-                          width={ 1920 }
-                          height={ 1080 }
-                          unoptimized={ true } // TODO: For some reason it doesn't work without this...
-                        />
-                      </div>
-                      <div
-                        className="w-1/2 flex justify-center"
-                        >
-                        <Card
-                          className="h-full bg-black border-grey-light"
+                  <div>
+                    <div
+                      key={ idx }
+                      className={`hidden w-full md:flex ${idx % 2 == 0 ? 'flex-row' : 'flex-row-reverse'} gap-4`}
+                      >
+                        <div
+                          className="w-1/2 flex justify-center border-4 border-grey-light shadow-grey-dark rounded-md"
                           >
-                          <div
-                            id="cardTitle"
-                            className="flex justify-between"
+                          <Image 
+                            src={ project.imageUrl }
+                            alt={ project.altText }
+                            width={ 1920 }
+                            height={ 1080 }
+                            unoptimized={ true } // TODO: For some reason it doesn't work without this...
+                          />
+                        </div>
+                        <div
+                          className="w-1/2 flex justify-center"
+                          >
+                          <Card
+                            className="h-full bg-black border-grey-light"
                             >
-                            <h5
-                              className="text-2xl"
-                              >
-                                { project.projectName }
-                            </h5>
                             <div
-                              className="flex justify-center"
+                              id="cardTitle"
+                              className="flex justify-between"
                               >
-                              <Chip 
-                                stat={ project.status }
-                              />
+                              <h5
+                                className="text-2xl"
+                                >
+                                  { project.projectName }
+                              </h5>
+                              <div
+                                className="flex justify-center"
+                                >
+                                <Chip 
+                                  stat={ project.status }
+                                />
+                              </div>
                             </div>
-                          </div>
-                          <p>
-                            { portableToPlainText(project.body) }
-                          </p>
-                          <div
-                            className="flex justify-between"
-                            >
-                              <div
-                                className="flex gap-2"
-                                >
-                                { project.skills.map((skill : string, idx : number) => (
-                                  <Badge
-                                    className="bg-grey-dark text-white"
-                                    key={ idx }
-                                    >
-                                    { skill }
-                                  </Badge>
-                                ))}
-                              </div>
-                              <div
-                                className="flex gap-2"
-                                >
-                                <Link
-                                  href={`/blog/${project.post?.slug.current}`}
-                                  target="_blank"
+                            <p>
+                              { portableToPlainText(project.body) }
+                            </p>
+                            <div
+                              className="flex justify-between"
+                              >
+                                <div
+                                  className="flex gap-2"
                                   >
-                                  <Button
-                                    className={`bg-grey-dark ${ project.post ? 'block' : 'hidden'}`} 
-                                    >
-                                    Read More
-                                  </Button>
-                                </Link>
-                                <Link
-                                  href={ project.liveLink ?? ''}
-                                  target="_blank"
+                                  { project.skills.map((skill : string, idx : number) => (
+                                    <Badge
+                                      className="bg-grey-dark text-white"
+                                      key={ idx }
+                                      >
+                                      { skill }
+                                    </Badge>
+                                  ))}
+                                </div>
+                                <div
+                                  className="flex gap-2"
                                   >
-                                  <Button
-                                    className={`bg-grey-dark ${ project.liveLink ? 'block' : 'hidden'}`} 
+                                  <Link
+                                    href={`/blog/${project.post?.slug.current}`}
+                                    target="_blank"
                                     >
-                                    Visit Site
-                                  </Button>
-                                </Link>
-                              </div>
+                                    <Button
+                                      className={`bg-grey-dark ${ project.post ? 'block' : 'hidden'}`} 
+                                      >
+                                      Read More
+                                    </Button>
+                                  </Link>
+                                  <Link
+                                    href={ project.liveLink ?? ''}
+                                    target="_blank"
+                                    >
+                                    <Button
+                                      className={`bg-grey-dark ${ project.liveLink ? 'block' : 'hidden'}`} 
+                                      >
+                                      Visit Site
+                                    </Button>
+                                  </Link>
+                                </div>
+                            </div>
+                          </Card>
+                        </div>
+                    </div>
+                    <div
+                      className="w-screen h-1/3 md:hidden flex flex-col items-center"
+                    >
+                      <Card
+                        className="w-5/6 bg-black border-grey-light"
+                      >
+                        <div
+                          className="flex flex-row gap-x-4 justify-between"
+                        >
+                          <h5
+                            className="text-xl"
+                          >
+                            { project.projectName }
+                          </h5>
+                          <div>
+                            <Chip
+                              stat={ project.status }
+                            />
                           </div>
-                        </Card>
-                      </div>
+                        </div>
+                        <div
+                          className="line-clamp-5"
+                        >
+                          { portableToPlainText(project.body) }
+                        </div>
+                      </Card>
+                    </div>
                   </div>
                 ))
               }

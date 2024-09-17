@@ -16,18 +16,18 @@ export default async function TimelineBio() {
   // Sort fetched data based on date
   timelinePoints.sort((a, b) => Date.parse(a.date) - Date.parse(b.date));
 
-  // TODO: add mobile support
   return (
     <>
     <div
-      className="flex flex-col my-10"
+      className="flex flex-col my-10 md:my-16"
       >
       <div
-        className="flex flex-row"
+        className="flex flex-col gap-y-4 md:gap-y-0 md:flex-row"
         >
         <Bio />
+        <Divider text="-" className="md:hidden"/>
         <div
-          className="w-2/3 flex justify-center"
+          className="w-full md:w-2/3 flex justify-center"
         >
           <Timeline
             className="w-2/3"

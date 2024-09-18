@@ -13,6 +13,7 @@ import { TbBrandNextjs, TbBrandCpp  } from "react-icons/tb";
 import { FaReact, FaNode, FaPython, FaDocker, FaJava  } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiSanity, SiPostgresql, SiGreensock, SiTailwindcss } from "react-icons/si";
+import { DiRuby } from "react-icons/di";
 
 export default function LandingPage() {
   
@@ -32,6 +33,7 @@ export default function LandingPage() {
     {name: "Sanity", icon: <SiSanity />},
     {name: "GSAP", icon: <SiGreensock />},
     {name: "TailwindCSS", icon : <SiTailwindcss />},
+    {name: "Ruby", icon: <DiRuby />}
   ]
 
   useGSAP(() => {

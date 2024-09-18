@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ChevronDoubleDown from "./icons/ChevronDoubleDown";
 
 export default function SeeMore() {
@@ -8,15 +8,15 @@ export default function SeeMore() {
   const TIMEOUT = 5000 // 5 seconds
 
   const [screenIdle, setScreenIdle] = useState<boolean>(false);
-  let timeoutId : ReturnType<typeof setTimeout>;
+  const timeoutId =  useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   useEffect(() => {
      // Render See More component if screen doesn't move for more than TIMEOUT seconds
-    timeoutId = setTimeout(() => {
+    timeoutId.current = setTimeout(() => {
       setScreenIdle(true);
     }, TIMEOUT)
 
     return () => {
-      clearTimeout(timeoutId);
+      clearTimeout(timeoutId.current);
     }
   }, [])
 
@@ -25,12 +25,11 @@ export default function SeeMore() {
       if(screenIdle == true) {
         setScreenIdle(false);
       } else {
-        clearTimeout(timeoutId);
+        clearTimeout(timeoutId.current);
       }
     }
   }
 
-  // TODO: add bounce animation to this later
   return (
     <>
        { ( screenIdle && (

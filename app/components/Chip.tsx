@@ -29,9 +29,13 @@ export default function Chip({ stat, className = '' } : statusType) {
       >
       <Badge
         icon={ getIcon(status[stat]) }
-        className={ className }
+        className={ `${ className } gap-0 md:gap-1` }
         >
-          { stat }
+          <div
+            className="hidden md:block"
+          >
+            { stat }
+          </div>
       </Badge>
     </div>
   )

@@ -39,7 +39,7 @@ export default async function BlogPage({ params } : blogType) {
       className="py-24 flex justify-center flex-grow whitespace-pre-line bg-grey"
       >
         <div
-          className="w-1/3 flex flex-col gap-2 justify-center"
+          className="mx-10 md:w-1/3 flex flex-col gap-2 justify-center"
           >
             <div
               className="flex justify-between"

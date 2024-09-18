@@ -38,20 +38,6 @@ export default function NavBar() {
             }}
             />
         </NavbarBrand>
-        <NavbarToggle />
-        <NavbarCollapse>
-          {
-            navItems.map((header, idx) => (
-              <NavbarLink
-              className="text-white"
-              key={ idx }
-              href={ header.url }
-              >
-                { header.text }
-              </NavbarLink>
-            ))
-          }
-        </NavbarCollapse>
     </Navbar>
   )
 }

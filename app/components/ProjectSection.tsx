@@ -39,9 +39,10 @@ export default function ProjectSection() {
             ref={ projectContainer }
             >
               { projects.map((project, idx) => (
-                  <div>
+                  <div
+                    key={ idx }
+                  >
                     <div
-                      key={ idx }
                       className={`hidden w-full md:flex ${idx % 2 == 0 ? 'flex-row' : 'flex-row-reverse'} gap-4`}
                       >
                         <div

@@ -145,10 +145,54 @@ export default function ProjectSection() {
                             />
                           </div>
                         </div>
+                        <Image 
+                          src={ project.imageUrl }
+                          alt={ project.altText }
+                          width={ 1920 }
+                          height={ 1080 }
+                          unoptimized={ true } // TODO: For some reason it doesn't work without this...
+                        />
                         <div
                           className="line-clamp-5"
                         >
                           { portableToPlainText(project.body) }
+                        </div>
+                        <div
+                          className="flex gap-x-2 flex-wrap gap-y-2"
+                        >
+                          { project.skills.map((skill : string, idx : number) => (
+                              <Badge
+                                className="bg-grey-dark text-white"
+                                key={ idx }
+                                >
+                                { skill }
+                              </Badge>
+                            ))
+                          } 
+                        </div>
+                        <div
+                          className="flex gap-2"
+                          >
+                          <Link
+                            href={`/blog/${project.post?.slug.current}`}
+                            target="_blank"
+                            >
+                            <Button
+                              className={`bg-grey-dark ${ project.post ? 'block' : 'hidden'}`} 
+                              >
+                              Read More
+                            </Button>
+                          </Link>
+                          <Link
+                            href={ project.liveLink ?? ''}
+                            target="_blank"
+                            >
+                            <Button
+                              className={`bg-grey-dark ${ project.liveLink ? 'block' : 'hidden'}`} 
+                              >
+                              Visit Site
+                            </Button>
+                          </Link>
                         </div>
                       </Card>
                     </div>

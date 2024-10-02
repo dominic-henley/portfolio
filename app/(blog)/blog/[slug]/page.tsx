@@ -50,7 +50,11 @@ export default async function BlogPage({ params } : blogType) {
                   <Link
                     href="/"
                     >
-                    <FaChevronLeft />
+                      <h3
+                        className="text-white font-bold"
+                      >
+                        &lt;
+                      </h3>
                   </Link>
                   <Image 
                     src={ logo }
@@ -60,7 +64,7 @@ export default async function BlogPage({ params } : blogType) {
                     className="rounded-full overflow-hidden"
                     />
                 </div>
-                <span className="flex items-center">{ moment(blog.publishDate).format('DD MMM YYYY') }</span>
+                <span className="flex items-center text-white">{ moment(blog.publishDate).format('DD MMM YYYY') }</span>
             </div>
             <div>
               <Image 
@@ -72,9 +76,9 @@ export default async function BlogPage({ params } : blogType) {
               />
             </div>
             <div>
-              <span className="underline">{ blog.title }</span>
+              <span className="underline text-white">{ blog.title }</span>
             </div>
-            <div>
+            <div className="text-white">
               { portableToPlainText(blog.body) }
             </div>
         </div>

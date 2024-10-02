@@ -14,7 +14,7 @@ export default function Icon({ name, icon, className = '', url = undefined } : i
   return (
     <>
       <IconContext.Provider
-        value={ { size: "45px" } }
+        value={ { size: "45px", color: 'white' } }
         >
           { url && (
               <a href={ url } target="_blank">
@@ -27,7 +27,7 @@ export default function Icon({ name, icon, className = '', url = undefined } : i
                       { icon }
                     </div>
                     <div
-                      className="flex justify-center"
+                      className="flex justify-center text-white"
                       >
                       { name }
                     </div>
@@ -44,7 +44,7 @@ export default function Icon({ name, icon, className = '', url = undefined } : i
                   { icon }
                 </div>
                 <div
-                  className="flex justify-center"
+                  className="flex justify-center text-white"
                   >
                   { name }
                 </div>

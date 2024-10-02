@@ -28,7 +28,7 @@ export default function NavBar() {
         <NavbarBrand
           href="/"
           >
-          <span className="flex self-center whitespace-pre font-semibold">Dominic Henley | </span>
+          <span className="flex self-center whitespace-pre font-semibold text-white">Dominic Henley | </span>
           <Typewriter 
             options={{
               strings: typewriterWords,

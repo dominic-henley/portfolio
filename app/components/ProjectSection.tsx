@@ -57,7 +57,7 @@ export default function ProjectSection() {
                           className="w-1/2 flex justify-center"
                           >
                           <Card
-                            className="h-full bg-black border-grey-light"
+                            className="h-full text-white bg-black border-grey-light"
                             >
                             <div
                               id="cardTitle"
@@ -126,7 +126,7 @@ export default function ProjectSection() {
                       className="w-screen h-1/3 md:hidden flex flex-col items-center"
                     >
                       <Card
-                        className="w-5/6 bg-black border-grey-light"
+                        className="w-5/6 text-white bg-black border-grey-light"
                       >
                         <div
                           className="flex flex-row gap-x-4 justify-between"

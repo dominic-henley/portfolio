@@ -36,7 +36,9 @@ export default function SeeMore() {
             <div
               className="flex flex-col absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pb-4 animate-fade" 
             >
-                <div>
+                <div
+                  className="text-white"
+                >
                   See More
                 </div>  
                 <div

@@ -16,7 +16,7 @@ export default function Bio() {
       className="w-full md:w-1/2 flex justify-center"
       >
         <Card
-          className="w-5/6 md:w-2/3 h-full py-10 bg-black border-grey-light"
+          className="w-5/6 md:w-2/3 h-full py-10 text-white bg-black border-grey-light"
           >
             <div
               className="flex flex-col"

@@ -52,7 +52,9 @@ export default function LandingPage() {
           <div
             className="flex justify-center"
             >
-            <h3>
+            <h3
+              className="text-white"
+            >
                 Hi, my name is Dominic. Nice to meet you!
             </h3>
           </div>
@@ -73,7 +75,7 @@ export default function LandingPage() {
           className="md:w-1/2 flex flex-col justify-center content-center gap-y-6"
           >
           <div
-            className="w-full flex justify-center"
+            className="w-full flex justify-center text-white"
             >
             Some of my skills:
           </div>

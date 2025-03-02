@@ -70,6 +70,13 @@ export default function LandingPage() {
               className="m-3 rounded-full overflow-hidden"
               />
           </div>
+          <div>
+            <h3
+              className="flex justify-center"
+            >
+              Currently employed at Culture Amp as an Associate Engineer
+            </h3>
+          </div>
         </div>
         <div
           className="md:w-1/2 flex flex-col justify-center content-center gap-y-6"
